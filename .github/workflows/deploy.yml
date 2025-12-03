@@ -37,8 +37,8 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Build with Hugo
-        run: cd presentation/portfolio
-          hugo --minify
+        working-directory: presentation/portfolio
+        run: hugo --minify
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
