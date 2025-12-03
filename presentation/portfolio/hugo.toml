@@ -1,0 +1,27 @@
+baseURL = 'https://BElmane.github.io/ASE-230-repo/'
+languageCode = 'en-us'
+title = 'Student Course Management System - Portfolio'
+
+
+[params]
+  author = "Bebba Elmane"
+  description = "A comprehensive REST API system built with Laravel, Docker, and modern web technologies"
+  github = "https://github.com/BElmane/ASE-230-repo"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    name = "Documentation"
+    url = "/docs/"
+    weight = 3
+  [[menu.main]]
+    name = "API Reference"
+    url = "/api/"
+    weight = 4
