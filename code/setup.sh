@@ -28,6 +28,7 @@ docker compose exec app php artisan key:generate --force
 docker compose exec app php artisan config:clear
 docker compose exec app php artisan migrate --force
 
+
 echo ""
 echo "Docker deployment complete!"
 echo ""

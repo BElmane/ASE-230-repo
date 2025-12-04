@@ -15,8 +15,15 @@ DB_PASSWORD="Tacoshouse&2"
 
 # Check if .env exists
 if [ ! -f .env ]; then
-    echo "Error: .env file not found!"
-    exit 1
+    echo "Creating .env file from .env.example..."
+    cp .env.example .env
+    
+    sed -i '' "s/DB_DATABASE=laravel/DB_DATABASE=$DB_NAME/" .env
+    sed -i '' "s/DB_USERNAME=root/DB_USERNAME=$DB_USER/" .env
+    sed -i '' "s/DB_PASSWORD=/DB_PASSWORD=$DB_PASSWORD/" .env
+    
+    echo "Generating application key..."
+    php artisan key:generate --force
 fi
 
 echo "Installing Composer dependencies..."
